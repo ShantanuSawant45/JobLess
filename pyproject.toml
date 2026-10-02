@@ -1,0 +1,21 @@
+[project]
+name = "jobless"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "arq>=0.28.0",
+    "asyncpg>=0.31.0",
+    "fastapi[standard]>=0.142.2",
+    "httpx>=0.28.1",
+    "pydantic-settings>=2.15.0",
+    "redis>=5.3.1",
+    "sqlalchemy>=2.1.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
