@@ -10,3 +10,6 @@ wheels/
 .venv
 
 .env
+
+# Raw company data (copy-pasted / scraped text, not source code)
+data/raw/
