@@ -5,7 +5,7 @@ from app.config import get_settings
 # Gemini API endpoint for the flash model (fast and cheap, good for RAG)
 GEMINI_API_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    "gemini-2.0-flash:generateContent"
+    "gemini-2.5-flash:generateContent"
 )
 
 
@@ -41,9 +41,7 @@ def generate(prompt: str) -> str:
     response.raise_for_status()
 
     data = response.json()
-
-    # Extract the text from Gemini's response structure:
-    # data["candidates"][0]["content"]["parts"][0]["text"]
+    
     try:
         return data["candidates"][0]["content"]["parts"][0]["text"]
     except (KeyError, IndexError) as e:
