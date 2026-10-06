@@ -1,0 +1,82 @@
+[
+  {
+    "company": "razorpay",
+    "question": "Who founded Razorpay?",
+    "expected_answer": "IIT Roorkee alumni"
+  },
+  {
+    "company": "razorpay",
+    "question": "What is RazorpayX?",
+    "expected_answer": "A comprehensive business banking platform that provides fully-functional current accounts, supercharges payouts, and automates payroll compliance."
+  },
+  {
+    "company": "razorpay",
+    "question": "Name three backers of Razorpay.",
+    "expected_answer": "Gic, Sequoia, Ribbit Capital, Tiger Global Management, Matrix Partners India, Y Combinator, Lightspeed."
+  },
+  {
+    "company": "razorpay",
+    "question": "What payment modes does Razorpay support?",
+    "expected_answer": "Credit card, debit card, netbanking, UPI, and popular wallets like JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money, and PayZapp."
+  },
+  {
+    "company": "razorpay",
+    "question": "Where is Razorpay's headquarters located?",
+    "expected_answer": "Bangalore (Adugodi)."
+  },
+  {
+    "company": "razorpay",
+    "question": "Is Razorpay PCI Compliant?",
+    "expected_answer": "Yes."
+  },
+  {
+    "company": "razorpay",
+    "question": "Does Razorpay hold a banking license?",
+    "expected_answer": "No, it is not a bank. Its current account and credit cards are provided by partner banks like ICICI, RBL, and Yes Bank."
+  },
+  {
+    "company": "razorpay",
+    "question": "What is the purpose of RazorpayX Payroll?",
+    "expected_answer": "To automate payroll compliance."
+  },
+  {
+    "company": "atlassian",
+    "question": "Who are the founders of Atlassian?",
+    "expected_answer": "Mike Cannon-Brookes and Scott Farquhar."
+  },
+  {
+    "company": "atlassian",
+    "question": "When did Atlassian launch Jira 1.0?",
+    "expected_answer": "2002."
+  },
+  {
+    "company": "atlassian",
+    "question": "What are the five core values of Atlassian?",
+    "expected_answer": "Open company, no bullshit; Build everything with heart and balance; Don't #@!% the customer; Play as a team; Be the change you seek."
+  },
+  {
+    "company": "atlassian",
+    "question": "Under what symbol is Atlassian listed on NASDAQ?",
+    "expected_answer": "TEAM."
+  },
+  {
+    "company": "atlassian",
+    "question": "When did Atlassian launch Jira Service Management?",
+    "expected_answer": "2020."
+  },
+  {
+    "company": "atlassian",
+    "question": "What is Pledge 1%?",
+    "expected_answer": "A pledge to donate 1% of equity, profit, employee time, and software licenses to the community."
+  },
+  {
+    "company": "atlassian",
+    "question": "What is Rovo?",
+    "expected_answer": "Atlassian's AI teammate, announced in 2024."
+  },
+  {
+    "company": "atlassian",
+    "question": "Which company did Atlassian acquire in 2023?",
+    "expected_answer": "Loom."
+  }
+]
