@@ -6,23 +6,16 @@ COPY --from=ghcr.io/astral-sh/uv:0.4.10 /uv /bin/uv
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     UV_COMPILE_BYTECODE=1 \
-    UV_LINK_MODE=copy \
-    UV_HTTP_TIMEOUT=300
+    UV_LINK_MODE=copy
 
 WORKDIR /app
 
-# Install dependencies first so this layer is cached until deps change
 COPY pyproject.toml uv.lock ./
-
-# Install CPU-only PyTorch BEFORE uv sync.
-# sentence-transformers depends on torch, and by default uv would pull the
-# full CUDA build (5 GB+ of nvidia-* wheels) which times out in Docker.
-# Pointing to the cpu index forces the tiny CPU wheel instead.
-RUN uv pip install --system \
-    torch==2.7.0+cpu torchvision==0.22.0+cpu \
-    --index-url https://download.pytorch.org/whl/cpu
-
-RUN uv sync --frozen --no-dev --no-install-project
+RUN uv sync --frozen --no-dev --no-install-project \
+      --no-install-package sentence-transformers \
+      --no-install-package torch \
+      --no-install-package torchvision \
+      --no-install-package langchain-text-splitters
 
 COPY app ./app
 
