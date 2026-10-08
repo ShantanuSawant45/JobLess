@@ -11,6 +11,7 @@ router = APIRouter(prefix="/chat", tags=["chat"])
 class ChatRequest(BaseModel):
     company: str
     question: str
+    source_type: str | None = None
 
 
 class ChatResponse(BaseModel):
@@ -31,7 +32,12 @@ def chat(request: ChatRequest) -> ChatResponse:
     if not question:
         raise HTTPException(status_code=400, detail="question must not be empty")
 
-    chunks = search(question=question, company=company, top_k=5)
+    chunks = search(
+        question=question, 
+        company=company, 
+        top_k=5, 
+        source_type=request.source_type
+    )
 
     if not chunks:
         raise HTTPException(

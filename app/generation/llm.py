@@ -35,7 +35,7 @@ def generate(prompt: str, max_retries: int = 5) -> str:
         ]
     }
 
-    delay = 2.0
+    delay = 5.0
     for attempt in range(max_retries):
         response = httpx.post(
             GEMINI_API_URL,
@@ -46,8 +46,9 @@ def generate(prompt: str, max_retries: int = 5) -> str:
         
         if response.status_code == 429:
             if attempt < max_retries - 1:
+                print(f"  [LLM] 429 Rate Limit Hit. Waiting {delay}s before retry {attempt+1}/{max_retries}...")
                 time.sleep(delay)
-                delay *= 2  # exponential backoff
+                delay *= 1.5  # exponential backoff
                 continue
             else:
                 response.raise_for_status()
