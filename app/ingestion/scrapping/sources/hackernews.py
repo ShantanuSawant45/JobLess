@@ -6,7 +6,7 @@ from collections import defaultdict
 
 import httpx
 
-from app.ingestion.models import Document
+from app.ingestion.scrapping.models import Document
 
 logger = logging.getLogger(__name__)
 

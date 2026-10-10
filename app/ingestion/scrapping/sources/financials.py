@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 
 import yfinance as yf
 
-from app.ingestion.models import Document
+from app.ingestion.scrapping.models import Document
 
 logger = logging.getLogger(__name__)
 

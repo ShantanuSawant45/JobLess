@@ -3,14 +3,14 @@ from urllib.parse import quote
 
 import httpx
 
-from app.ingestion.models import Document
+from app.ingestion.scrapping.models import Document
 
 logger = logging.getLogger(__name__)
 
 API_URL = "https://en.wikipedia.org/w/api.php"
 
 # Wikimedia requires a descriptive User-Agent with contact info
-HEADERS = {"User-Agent": "CompanyRAG/0.1 (student project; your-email@example.com)"}
+HEADERS = {"User-Agent": "CompanyRAG/0.1 (student project; shanpantech264@gmail.com)"}
 
 TRAILING_SECTIONS = (
     "== References ==",

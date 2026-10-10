@@ -4,7 +4,7 @@ import logging
 import httpx
 
 from app.config import get_settings
-from app.ingestion.models import Document
+from app.ingestion.scrapping.models import Document
 
 logger = logging.getLogger(__name__)
 
